@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>Reading List</title>
+        <script src="https://kit.fontawesome.com/cfe0cd2f67.js" crossorigin="anonymous"></script>
+		<!-- external CSS link
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css"> -->
+	</head>
+	<body>
+        <h1>Reading List</h1>
+        <section>
+            
+            <h2>Your current list:</h2>
+            <ul>
+                <%for(let i=0; i<result.length; i++){ %>
+                    <li> <span><b><%= result[i].name %></b></span> By 
+                        <span><%= result[i].author %></span> 
+                        <i class="fa fa-trash"></i>                    
+                    </li>
+                <%}%> 
+            </ul>
+        </section>
+        <form action="/addBook" method="POST">
+            <h3>Add a book to your list:</h3>
+            <input type="text" placeholder="Book" name="bookName" class="input">
+            <input type="text" placeholder="Author" name="author" class="input">
+            <input type="submit">
+        </form>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
