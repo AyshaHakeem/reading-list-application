@@ -9,8 +9,8 @@
 		<title>Reading List</title>
         <script src="https://kit.fontawesome.com/cfe0cd2f67.js" crossorigin="anonymous"></script>
 		<!-- external CSS link
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css"> -->
+		<link rel="stylesheet" href="css/normalize.css"> -->
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
         <h1>Reading List</h1>
@@ -19,9 +19,9 @@
             <h2>Your current list:</h2>
             <ul>
                 <%for(let i=0; i<result.length; i++){ %>
-                    <li> <span><b><%= result[i].name %></b></span> By 
+                    <li> <span class="book-name"><%= result[i].name %></span> By 
                         <span><%= result[i].author %></span> 
-                        <i class="fa fa-trash"></i>                    
+                        <span class="fa fa-trash"></span>                    
                     </li>
                 <%}%> 
             </ul>
